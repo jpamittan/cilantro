@@ -1,0 +1,26 @@
+<div id="wrapper">
+  
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+      
+      <% include /partials/_header %>
+      <% include /partials/_toplinks %>
+      <% include /partials/_sidebar %>
+      
+  </nav>
+
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="page-header" id="subscriber-name"></h3>
+      </div>
+    </div>
+
+    <div class="panel-body">
+      <div class="loader"></div>
+      <% include /partials/_profile %>
+      <% include /partials/_balance %>
+      <% include /partials/_transactions %>
+    </div>
+
+  </div>
+</div>

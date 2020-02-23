@@ -1,0 +1,61 @@
+<button id='checkout'>Checkout</checkout>
+<script>
+
+var request = new XMLHttpRequest();
+
+request.open('POST', 'https://pg-sandbox.paymaya.com/checkout/v1/checkouts');
+
+request.setRequestHeader('Content-Type', 'application/json');
+request.setRequestHeader('Authorization', 'Basic cGstVnJ3a1BNNHJPWVdYeXJKakxqVDlGbGt5bkN4eElwTlZQSDVubDJhRXg3NTo=');
+
+request.onreadystatechange = function () {
+  console.log("ready");
+  if (this.readyState === 4) {
+    console.log('Status:', this.status);
+    console.log('Headers:', this.getAllResponseHeaders());
+    console.log('Body:', this.responseText);
+  }
+};
+
+var body = {
+  'totalAmount': {
+    'currency': 'PHP',
+    'value': '500.00',
+  },
+  'buyer': {
+    'firstName': 'Juan',
+    'middleName': 'dela',
+    'lastName': 'Cruz',
+    'contact': {
+      'phone': '+63(2)1234567890'
+    }
+  },
+  'items': [
+    {
+      'name': 'Canvas Slip Ons',
+      'code': 'CVG-096732',
+      'quantity': '3',
+      'amount': {
+        'value': '500.00'
+      },
+      'totalAmount': {
+        'value': '500.00'
+      }
+    }
+  ],
+  'requestReferenceNumber': '000141386713',
+  'isAutoRedirect': false,
+  'metadata': {
+    'type' : "own",
+     'msisdn' : "639490143162",
+     'amount': {
+       'value': 10,
+       'unit': "PHP"
+     },
+  }
+};
+
+request.send(JSON.stringify(body));
+
+
+</script>

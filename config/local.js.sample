@@ -1,0 +1,178 @@
+module.exports = {
+
+  port: process.env.PORT || 8084,
+  
+  environment: process.env.NODE_ENV || 'development',
+  
+  matrixx: {
+    timeout: 600000,
+    https: false,
+    options: {
+      host: '10.0.4.19',
+      port: '8080'
+    },
+    base_path: '/rsgateway/data/v3'
+  },
+
+  barley: {
+    url: 'http://staging.cloud.barley.cilantro.xyz',
+    authorization: 'TJBPzpu5dJfFvRlmJZz1'
+  },
+
+  winston: {
+    filename: 'sampleevent.log',
+    level: 'info',
+    eol: '\n',
+    timestamp: true,
+    remote_host: '127.0.0.1',
+    remote_port: 9003
+  },
+  
+  sns: {
+    region: 'us-west-2',
+    api_version: '2010-03-31',
+    key_id: 'AKIAJOWN2B2X67GNDFCA',
+    access_key: 'oyjAaMOz2Dtt96nwSJrw+AiNaCRuoEgPPg6AkCbU',
+    android_arn: 'arn:aws:sns:us-west-2:205181465834:app/GCM/Hermosa-Android',
+    ios_arn: 'arn:aws:sns:us-west-2:205181465834:app/APNS_SANDBOX/Hermosa-iOS-Dev'
+  },
+
+  chikka: {
+    url: 'https://post.chikka.com',
+    client_id: '0f405710fa8c00c362735e25a04bb164f5383909ed987241210e6b4fe28169ce',
+    secret_key: '10e40106a62b43c00d7b1583997fc64ada51ef496fc2f053f4c510f063196580',
+    shortcode: '29290818'
+  },
+
+  active_mq: {
+    host: '10.0.4.21',
+    port: 61613,
+    url: '/topic/matrixx.all',
+    username: 'guest',
+    password: 'guest'
+  },
+
+  skip_activation_code: false,
+
+  auth0: {
+    url: 'https://smartlife.auth0.com',
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiI1RXc2Y3VHa0ZzbDhPdkFZOE1aY0ZaVjY2V2FFNExpVSIsInNjb3BlcyI6eyJ1c2Vyc19hcHBfbWV0YWRhdGEiOnsiYWN0aW9ucyI6WyJ1cGRhdGUiXX0sInVzZXJzIjp7ImFjdGlvbnMiOlsicmVhZCIsInVwZGF0ZSJdfX0sImlhdCI6MTQ1MTM2MTQ5NSwianRpIjoiNjI5ZTM1ZjI4ZmQ3ZDJiMWVkOWY1YzkxY2Y3YzNiOGYifQ.XGbvIKsb8c0ksWIyjNW53oFS37C3bNLLlDGX90ewA5k',
+    domain: 'smartlife.auth0.com',
+    client_id: '6m7YKvZypjhj0jkX6C2Wuz2IP4yjqwzz',
+    client_secret: 'sigNdRCAhkqZ2N5nhxNY6GGfmUGfGSeoyvJeh6FGRHg9u8Vc-Kwrx8yrPvP8CWql'
+  },
+
+  cron: {
+    schedule: '59 59 15 * * *',
+    initialize: true
+  },
+
+  health_check: {
+    timeout: 3000
+  },
+
+  paymaya: {
+    url: 'https://pg-sandbox.paymaya.com',
+    authorization: 'Basic c2stM1BLOEhPMDhWd1dNT0RMbGJPQk9rU0x4S2JmWnhxOWhjT2d0ellWYjBqVzo=',
+    callback_host: 'http://52.34.34.164:8080',
+    callback_success: '/hermosa/v1/checkout/result?status=success',
+    callback_failure: '/hermosa/v1/checkout/result?status=failure',
+  },
+
+  basil: {
+    url: 'http://localhost:1336',
+  },
+
+  smartpay: {
+    url: 'http://localhost:1337'
+  },
+
+  epin: {
+    url: 'http://125.60.167.7:80',
+    username: 'smartlife',
+    password: 'smartlifestage'
+  },
+
+  token: {
+    mode: 'aes-128-cfb',
+    key: 'CVj0O2WK1bd9mrR4',
+    iv: 'dxm7k12FLLgd0U95',
+    lifetime: 3600, // 86400  default
+  },
+
+  vcode: {
+    mode: 0,
+    length: 6,
+    validity: 60 * 60 * 24,
+    max_incorrect_attempts: 5
+  },
+
+  s3: {
+    region: 'us-west-2',
+    api_version: '2010-03-31',
+    bucket: 'project-hermosa',
+    key_id: 'AKIAJBMLUAXMDB25BARA',
+    access_key: 'iMejFKZnECftKlkbK6zGad3ZpBmTMd9Uj+lvJ+a/',
+    dump_dir: 'talas/'
+  },
+
+  rss_feeds: {
+    interaksyon: 'http://www.interaksyon.com/rss',
+    lifestyle: 'http://www.interaksyon.com/lifestyle/feed',
+    infotech: 'http://www.interaksyon.com/infotech/feed/rss',
+    motoring: 'http://www.interaksyon.com/motoring/feed',
+    sports: 'http://www.interaksyon.com/interaktv/feed',
+    entertainment: 'http://www.interaksyon.com/entertainment/feed/',
+  },
+
+  currency_converter: {
+    url: 'https://www.google.com/finance/converter'
+  },
+
+  paypal: {
+    mode: 'live', //sandbox or live
+    client_id: 'AQgLx3NspLcpQsKumAb2tj_fS3Unmoe3woteeYkNzBcJt_c8t4C0YBggrao8j2cHvvA80bd54ZmIA5Lq',
+    client_secret: 'ECmF7i57huT5pb7ZQyzig1qPPJeUVnV0mYiFxd0qvkoytYCrAhIi35p_cyoUm2jfF9X78HcB4DUnEGsd'
+  },
+
+  eload: {
+    url               : 'https://globaltopup.pldtglobal.com:8443',
+    sun_public_key    : 'ade443647d8248cda5cd932dda5a3aac',
+    sun_private_key   : '074e50622f404b659ec2115a97046381',
+    smart_public_key  : 'fcb52b716d7249a7b9ddfa3f73c409e7',
+    smart_private_key : '782eb3dd36e44309afd1a4d02cafb793',
+    pldt_public_key   : '6c0b40560a36488386caf2e0bd393fe1',
+    pldt_private_key  : 'ffbf37b32b184dbebcaaa959f8853db2',
+    dealer_code       : 'SmartlifeGlobal'
+  },
+  
+  bills_payment: {
+    url : 'https://bayadapi.smartpinoy.com/api/',
+    x_api_key : '7c52df009ba76f12f27cb5eca6bee31e',
+    token_id: 'oYILy5WJTJppsyI4PKtRPKBNbL3CjwQDPTt4eBiXAikThcVvff+ppyJD2qu2ZSly',
+    tpa_id: '0169'
+  },
+
+  connections: {
+    mysql: {
+      adapter: 'sails-mysql',
+      host: 'localhost',
+      user: 'devuser',
+      password: 'devuser123',
+      database: 'cilantro'
+    },
+  },
+
+  hopscotch: {
+    url: 'http://cdnassetsasia.gohopscotch.com/content/50/feed/3142/smartfeed',
+  },
+
+  ecom: {
+    url: 'http://celes.bcodeph.com/issuer-slife/getbcode?u=SLIFE&p=nesTecafuxuRahAsaChudrAtrezAF3&ref=',
+  },
+
+  mcp: {
+    url: 'http://mcp.gw.sun.net.ph',
+  },
+
+};

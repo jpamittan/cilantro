@@ -1,0 +1,86 @@
+#smarlife-logo {
+  width: 140px; /*width of your image*/
+  height: 100px; /*height of your image*/
+  background-image:url('/images/smartlife-logo.png');
+  margin: auto; /* If you want no margin */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#facebook-login {
+  cursor: pointer;
+  width: 205px;
+  height: 40px;
+  background-image:url('/images/facebook-login.png');
+  margin: auto; /* If you want no margin */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.navbar-brand {
+  background-image:url('/images/smartlife-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 15px;
+  width: 105px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.label-help {
+  color: #737373;
+  font-size: 15px;
+}
+
+#primary-circle {
+  width: 20px;
+  height: 20px;
+  background: #d039ba;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+#supp1-circle {
+  width: 20px;
+  height: 20px;
+  background: #885cda;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+#supp2-circle {
+  width: 20px;
+  height: 20px;
+  background: #6a68e3;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.progress-bar-primary {
+  background-color: #d039ba;
+}
+
+.progress-bar-supplemental-1 {
+  background-color: #885cda;
+}
+
+.progress-bar-supplemental-2 {
+  background-color: #6a68e3;
+}
+
+.nav-second-level li a {
+  cursor: pointer;
+}
+
+#subscriber-balance {
+  font-size: 20px;
+  float: right;
+}
+
+.boosters .panel-body hr {
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
+}
